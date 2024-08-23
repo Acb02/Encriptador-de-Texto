@@ -1,0 +1,273 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./img/fondo3.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    width: 10%;
+    max-width: 500px;
+    margin: bottom 10px;
+}
+
+.texto {
+    color: white;
+    position: absolute;
+    width: 45%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 5%;
+    font-family: "inter";
+    font-style: bold type;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    backdrop-filter: blur(15px);
+}
+
+.texto::placeholder {
+    font-family: "inter";
+    color: white;
+    
+}
+
+.texto:focus,
+.texto:active{
+    border: none;
+    outline: none;
+}    
+    
+.termino{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px;
+    gap: 20px;
+    position: absolute;
+    width: 80%;
+    left: 25%;
+    top: 80%;
+    color:white;
+}
+
+.ternimo p{
+    font-family: "inter";
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 150%;
+    left:25% ;
+    color:white;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    image-resolution: 50px;
+}
+
+.botones{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 1% 0%;
+position: absolute;
+width: 60%;
+left: 17%;
+top: 82%;
+gap: 15px; ;
+}
+
+.btn_encriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #f2db0c;
+    border-radius: 24px;
+    font-family: "inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: black;
+    font-style: bold type;
+    transition:transform 0.5s ease;
+}
+
+.btn_desencriptar {
+    align-items: center;
+    justify-items: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: gold;
+    border-radius: 24px;
+    font-family: "inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: black;
+    transition:transform 0.5s ease;
+}
+
+.btn_encriptar:hover,  
+.btn_desencriptar:hover {
+    transform: translate(5px, 5px);
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+}
+
+.btn_encriptar:hover,  ::before /*para darle animacion a los botones*/
+.btn_desencriptar:hover {
+    transform: translate(-5px, -5px);
+}
+
+.encriptado{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 85%;
+    left: 60%;
+    top: 5%;
+    background: transparent ;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+.mensaje__encriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensaje__encriptado h2{
+    width: 60%;
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: violet;
+}
+
+.mensaje__encriptado p{
+    width: 80%;
+    font-family: "inter";
+    font-style: inherit;
+    font-weight: 480;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color:white;
+}
+
+.encriptado img {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    top: 5%;
+}
+
+.btnCopy {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #f2db0c;
+    border-radius: 24px;
+    font-family: "inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: black;
+    font-style: bold type;
+    transition:transform 0.5s ease;
+}
+
+.btnCopy:hover{
+    transform: translate(5px, 5px);
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px; /* Reduce el tamaño de fuente */
+    padding: 5px 0; /* Reduce el padding para hacer el footer más pequeño */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+}
+
+.footer .links {
+    width: 20px; /* Reduce el tamaño de los íconos */
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 57.7em) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .texto, button, .btnCopy {
+        font-size: 14px;
+    }
+
+    .termino img {
+        width: 25px;
+    }
+
+    #muñeco {
+        width: 120px;
+    }
+
+    .footer .links {
+        width: 25px;
+    }
+}
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>.
+    <link rel="stylesheet" href="style.css">
+<body>
+
+    <div class="container">   <!--para agregar el contenedor principal-->
+            <img src="./img/fondo3.png" alt="fondo de pantalla"/>
+         <div class="encriptar">          <!-- para el contendor donde se escibira el texto-->
+            <textarea 
+            class="texto" 
+            name="texto" 
+            id="texto"       
+            cols="30" 
+            rows="10" 
+            placeholder= "Ingrese el texto aqui" 
+         ></textarea>
+         
+         <div class="termino">
+            <img src="./img/perro.png" alt="advertencia" />
+            <p>Solo letras minusculas y sin espacios</p>
+         </div>
+            
+         <div class="botones">
+             <button class="btn_encriptar"  type="button"  onclick="encriptar()">   <!--para el boton encriptar-->
+            Encriptar
+             </button>
+                 <button class="btn_desencriptar"  type="button"  onclick="desencriptar()">  <!--para el boton desencriptar-->
+            Desencriptar     
+                   
+                </button>
+         </div>
+          
+        <div class="encriptado" >
+            <img src="img/imagen3.png" alt=""  id="muñeco" />
+        
+         <div class="mensaje__encriptado">
+             <h2 id="tituloMensaje">Ningun mensaje fue encontrado</h2>
+             <p id="parrafo">Ingrese el texto que deseas encriptar o desencriptar</p>
+
+             <button class="btnCopy" id="btnCopy" onclick="copiarTexto()">
+                Copiar
+              </button>
+  
+         </div>    
+          
+        </div>
+    </div>
+
+<footer class="footer">
+    <p>Desarrollado por Ana Corporán </p>
+    <div>
+        <a href="https:/github.com/Acb02/" target="_blank">
+            <img class="links" src="./Img/github.png" />
+        </a>
+        <a href="https:/www.linkedin.com/in/ana-corporán-7a5a71312/" target="_blank">
+            <img class="links" src="./Img/Linkedin.png" />
+        </a>
+    </div>
+</footer>
+<script src="app.js">
+
+</script>
+</body>
+</html>
